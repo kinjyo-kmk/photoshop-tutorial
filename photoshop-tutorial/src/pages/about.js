@@ -6,8 +6,7 @@ export default function TOP() {
   return (
     <Layout>
       <div>
-        <p>トップページのメインコンテンツ！</p>
-        <Link to={"/about/"}>概要</Link>
+        <p>概要ページです。</p>
       </div>
     </Layout>
   )
