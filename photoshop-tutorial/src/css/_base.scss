@@ -1,0 +1,199 @@
+/* variable
+--------------------------------------------------------------*/
+$base_background: #fff;
+$base_font: '游ゴシック', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
+$base_width: 1110px;
+$base_font_size_pc: 1.6rem;
+$base_font_size_sp: 1.4rem;
+$base_line_height_pc: 1.7;
+$base_line_height_sp: 1.7;
+
+$font_color: #000;
+$link_color: #ff672d;
+$link_color_hover: #ec672c;
+$accent_color: #ff672d;
+$hover_opacity: 0.7;
+
+/* mixin
+--------------------------------------------------------------*/
+@mixin sp-screen {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin pc-screen {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin placeholder-color($color) {
+  &:placeholder-shown {
+    color: $color;
+  }
+
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  &:-moz-placeholder {
+    color: $color;
+    opacity: 1;
+  }
+
+  &::-moz-placeholder {
+    color: $color;
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+/* display
+--------------------------------------------------------------*/
+@include pc-screen {
+  .u-sp {
+    display: none;
+  }
+}
+@include sp-screen {
+  .u-pc {
+    display: none;
+  }
+}
+
+/* reset
+--------------------------------------------------------------*/
+::-webkit-input-placeholder {
+  color: inherit;
+}
+
+:-moz-placeholder {
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+input[type='submit'],
+input[type='button'] {
+  border-radius: 0;
+  appearance: button;
+
+  &::-webkit-search-decoration {
+    display: none;
+  }
+
+  &:focus {
+    outline-offset: -2px;
+  }
+}
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+/* Base
+--------------------------------------------------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: $base_background;
+  min-width: $base_width;
+  font-family: $base_font;
+  font-size: $base_font_size_pc;
+  line-height: $base_line_height_pc;
+  color: $font_color;
+  font-feature-settings: 'palt';
+  @include sp-screen {
+    min-width: 0;
+    font-size: $base_font_size_sp;
+    line-height: $base_line_height_sp;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  ::i-block-chrome,
+  body {
+    font-feature-settings: 'pkna';
+  }
+}
+
+@include sp-screen {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Link
+--------------------------------------------------------------*/
+a {
+  color: $link_color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: $link_color_hover;
+  }
+
+  &[href^='mailto:'] {
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+/* テキスト選択
+--------------------------------------------------------------*/
+::selection {
+  color: #fff;
+  background: $accent_color;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: $accent_color;
+}
