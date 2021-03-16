@@ -1,0 +1,13 @@
+@import './src/template/mixin.scss';
+
+.footer {
+  background: #000;
+
+  a {
+    color: #fff;
+  }
+  @include sp-screen {
+    margin-top: 100px;
+  }
+
+}

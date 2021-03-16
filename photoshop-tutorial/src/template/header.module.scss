@@ -1,0 +1,11 @@
+@import './src/template/mixin.scss';
+
+.header {
+  background: rebeccapurple;
+  margin-bottom: 1.45rem;
+}
+
+.header_heading {
+  color: #fff;
+  text-decoration: none;
+}

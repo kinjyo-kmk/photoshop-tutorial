@@ -1,3 +1,4 @@
+@import './src/template/mixin.scss';
 /* variable
 --------------------------------------------------------------*/
 $base_background: #fff;
@@ -14,57 +15,6 @@ $link_color_hover: #ec672c;
 $accent_color: #ff672d;
 $hover_opacity: 0.7;
 
-/* mixin
---------------------------------------------------------------*/
-@mixin sp-screen {
-  @media screen and (max-width: 767px) {
-    @content;
-  }
-}
-
-@mixin pc-screen {
-  @media screen and (min-width: 768px) {
-    @content;
-  }
-}
-
-@mixin clearfix {
-  &::after {
-    content: '';
-    clear: both;
-    display: block;
-  }
-}
-
-@mixin ellipsis {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-@mixin placeholder-color($color) {
-  &:placeholder-shown {
-    color: $color;
-  }
-
-  &::-webkit-input-placeholder {
-    color: $color;
-  }
-
-  &:-moz-placeholder {
-    color: $color;
-    opacity: 1;
-  }
-
-  &::-moz-placeholder {
-    color: $color;
-    opacity: 1;
-  }
-
-  &:-ms-input-placeholder {
-    color: $color;
-  }
-}
 
 /* display
 --------------------------------------------------------------*/
@@ -81,47 +31,53 @@ $hover_opacity: 0.7;
 
 /* reset
 --------------------------------------------------------------*/
-::-webkit-input-placeholder {
-  color: inherit;
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-
-:-moz-placeholder {
-  color: inherit;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
-
-button,
-input,
-select,
-textarea {
-  font: inherit;
-
-  &:focus {
-    outline: none;
-  }
+body {
+	line-height: 1;
 }
-
-input[type='submit'],
-input[type='button'] {
-  border-radius: 0;
-  appearance: button;
-
-  &::-webkit-search-decoration {
-    display: none;
-  }
-
-  &:focus {
-    outline-offset: -2px;
-  }
+ol, ul {
+	list-style: none;
 }
-
-sup {
-  vertical-align: super;
-  font-size: smaller;
+blockquote, q {
+	quotes: none;
 }
-
-sub {
-  vertical-align: sub;
-  font-size: smaller;
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 /* Base
@@ -139,6 +95,7 @@ html {
 }
 
 body {
+  margin: 0;
   background: $base_background;
   min-width: $base_width;
   font-family: $base_font;
