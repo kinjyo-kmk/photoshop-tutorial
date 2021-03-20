@@ -1,13 +1,13 @@
-@import './src/template/mixin.scss';
+@import './src/template/base.scss';
 
 .footer {
-  background: #000;
+  margin-top: 100px;
+  padding: 10px;
+  background: $accent_color;
+  text-align: center;
+  color: #fff;
 
-  a {
-    color: #fff;
-  }
   @include sp-screen {
-    margin-top: 100px;
+    margin-top: 50px;
   }
-
 }

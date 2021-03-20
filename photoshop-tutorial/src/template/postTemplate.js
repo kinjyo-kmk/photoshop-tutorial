@@ -1,6 +1,7 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import * as postStyles from "./post.module.scss"
+
 import Header from "./header"
 import Footer from "./footer"
 
@@ -12,16 +13,13 @@ export default function Template({
 
   return (
     <>
-      <Header siteTitle={data.site?.title || `Title`} />
+      <Header />
         <div className={postStyles.post_container}>
-          <div className={postStyles.post_inner}>
-            <h1>{frontmatter.title}</h1>
-            <h2>{frontmatter.date}</h2>
-            <div
-              className="blog-post-content"
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
+          <div className={postStyles.post_kv}>
+            <h1 className={postStyles.post_kv_heading}>{frontmatter.title}</h1>
+            <p  className={postStyles.post_kv_date}>{frontmatter.date}</p>
           </div>
+          <div  className={postStyles.post_content} dangerouslySetInnerHTML={{ __html: html }} />
         </div>
       <Footer />
     </>

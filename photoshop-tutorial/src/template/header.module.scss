@@ -1,11 +1,27 @@
-@import './src/template/mixin.scss';
+@import './src/template/base.scss';
 
 .header {
-  background: rebeccapurple;
-  margin-bottom: 1.45rem;
+  width: 100%;
+  background: $accent_color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
-.header_heading {
+.header_inner {
+  width: $base_width;
+  padding: 20px;
+  margin: 0 auto;
+
+  @include sp-screen {
+    width: 100%;
+  }
+}
+
+.header_heading a {
   color: #fff;
+  font-weight: bold;
   text-decoration: none;
+  font-size: 1.8rem;
 }

@@ -3,28 +3,28 @@
 --------------------------------------------------------------*/
 $base_background: #fff;
 $base_font: '游ゴシック', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
-$base_width: 1110px;
+$base_width: 1400px;
 $base_font_size_pc: 1.6rem;
 $base_font_size_sp: 1.4rem;
 $base_line_height_pc: 1.7;
 $base_line_height_sp: 1.7;
 
 $font_color: #000;
-$link_color: #ff672d;
-$link_color_hover: #ec672c;
-$accent_color: #ff672d;
+$link_color: #0080ae;
+$link_color_hover: #00b2c4;
+$accent_color: #0080ae;
 $hover_opacity: 0.7;
 
 
 /* display
 --------------------------------------------------------------*/
 @include pc-screen {
-  .u-sp {
+  .sp {
     display: none;
   }
 }
 @include sp-screen {
-  .u-pc {
+  .pc {
     display: none;
   }
 }
@@ -95,13 +95,13 @@ html {
 }
 
 body {
-  margin: 0;
   background: $base_background;
   min-width: $base_width;
   font-family: $base_font;
   font-size: $base_font_size_pc;
   line-height: $base_line_height_pc;
   color: $font_color;
+  position: relative;
   font-feature-settings: 'palt';
   @include sp-screen {
     min-width: 0;
