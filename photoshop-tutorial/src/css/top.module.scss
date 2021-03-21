@@ -1,0 +1,113 @@
+@import './src/css/base.scss';
+
+.top_kv {
+  height: 500px;
+  padding: 20px;
+  background: gray;
+
+  @include sp-screen {
+    height: 350px;
+  }
+
+  &_heading {
+    font-size: 3.2rem;
+    font-weight: bold;
+
+    @include sp-screen {
+      font-size: 2.8rem;
+    }
+  }
+
+  &_desc {
+    text-align: center;
+  }
+}
+
+.top_posts_wrap {
+  margin-top: 50px;
+
+  @include sp-screen {
+    margin-top: 30px;
+  }
+
+  &_heading {
+    margin-bottom: 30px;
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-align: center;
+
+    @include sp-screen {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+.top_posts {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include sp-screen {
+    display: block;
+  }
+
+  &_heading {
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+
+  &_date {
+    margin-top: auto;
+    font-size: 1.2rem;
+    text-align: right;
+
+    @include sp-screen {
+      margin-top: 1.5rem;
+    }
+  }
+
+  &_item {
+    width: calc((100% - 30px) / 3);
+
+    @include pc-screen {
+      &:not(:nth-of-type(3n)) {
+        margin-right: 15px;
+      }
+
+      &:nth-of-type(n+5) {
+        margin-top: 20px;
+      }
+    }
+
+    @include sp-screen {
+      width: 100%;
+
+      &:not(:first-of-type) {
+        margin-top: 20px;
+      }
+    }
+
+    a {
+      height: 100%;
+      padding: 10px;
+      display: block;
+      border-radius: 5px;
+      border: solid 2px $accent_color;
+      transition: .3s;
+
+
+      &:hover {
+        color: #fff;
+        background: $accent_color;
+        text-decoration: none;
+        transition: .3s;
+      }
+    }
+
+    article {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+}

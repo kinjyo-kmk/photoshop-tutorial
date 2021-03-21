@@ -1,0 +1,76 @@
+@import './src/css/base.scss';
+
+.post_content {
+  margin-top: 50px;
+
+  @include sp-screen {
+    margin-top: 25px;
+  }
+
+  h2,h3 {
+    font-weight: bold;
+    margin-top: 1em;
+  }
+
+  h2 {
+    font-size: 2.8rem;
+
+    @include sp-screen {
+      font-size: 2.4rem;
+    }
+  }
+
+  h3 {
+    font-size: 2.4rem;
+
+    @include sp-screen {
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    &:not(:first-of-type) {
+      margin-top: 1.5rem;
+    }
+  }
+
+  pre {
+    margin-top: 1.5em;
+    padding: 1em;
+    background: #cae2e0;
+    border-radius: 5px;
+  }
+}
+
+.post_kv {
+  margin-bottom: 30px;
+  padding: 20px 15px;
+  color: #fff;
+  background: $accent_color;
+
+  &_title {
+    font-size: 3.2rem;
+    font-weight: bold;
+  }
+
+  &_date {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: inline-block;
+  }
+
+  &_desc {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+}
+
+.post_nav {
+  margin-top: 80px;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-top: solid 1px #cae2e0;
+}

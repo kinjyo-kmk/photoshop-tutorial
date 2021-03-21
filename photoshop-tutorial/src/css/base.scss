@@ -1,13 +1,17 @@
 @import './src/css/mixin.scss';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Ranchers&display=swap');
+
 /* variable
 --------------------------------------------------------------*/
 $base_background: #fff;
-$base_font: '游ゴシック', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
-$base_width: 1400px;
+$base_font: 'Noto Sans JP', '游ゴシック', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo', sans-serif;
+$base_width: 1000px;
 $base_font_size_pc: 1.6rem;
 $base_font_size_sp: 1.4rem;
 $base_line_height_pc: 1.7;
 $base_line_height_sp: 1.7;
+
+$font_en: 'Ranchers', cursive;
 
 $font_color: #000;
 $link_color: #0080ae;

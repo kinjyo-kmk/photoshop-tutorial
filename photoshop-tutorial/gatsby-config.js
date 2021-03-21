@@ -1,15 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
-    },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
-    social: {
-      twitter: `kylemathews`,
-    },
+    title: `Photoshop Tutorial`,
+    description: `Photoshopで使える技術や小ネタ等を紹介していきます。目指せPhotoshopマスター！`,
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -99,6 +91,7 @@ module.exports = {
                     frontmatter {
                       title
                       date
+                      description
                     }
                   }
                 }
