@@ -1,0 +1,16 @@
+@import '../css/base.scss';
+
+.layout {
+  margin: 67px 0 0;
+}
+
+.layout_inner {
+  width: $base_width;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include sp-screen {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
