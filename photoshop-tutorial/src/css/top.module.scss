@@ -1,24 +1,19 @@
 @import './src/css/base.scss';
 
 .top_kv {
-  height: 500px;
-  padding: 20px;
-  background: gray;
 
-  @include sp-screen {
-    height: 350px;
-  }
-
-  &_heading {
-    font-size: 3.2rem;
-    font-weight: bold;
+  &_image {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
 
     @include sp-screen {
-      font-size: 2.8rem;
+      width: 70%;
     }
   }
 
   &_desc {
+    margin-top: 2em;
     text-align: center;
   }
 }

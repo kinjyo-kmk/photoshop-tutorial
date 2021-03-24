@@ -2,11 +2,12 @@
 
 .layout_inner {
   width: $base_width;
-  margin: 0 auto;
+  margin: 50px auto 0;
   padding: 0 20px;
 
   @include sp-screen {
     width: 100%;
-    padding: 0 10px;
+    margin-top: 25px;
+    padding: 0 15px;
   }
 }

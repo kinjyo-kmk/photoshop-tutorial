@@ -14,7 +14,7 @@ $base_line_height_sp: 1.7;
 $font_en: 'Ranchers', cursive;
 
 $font_color: #000;
-$link_color: #0080ae;
+$link_color: #00b2c4;
 $link_color_hover: #00b2c4;
 $accent_color: #0080ae;
 $hover_opacity: 0.7;
@@ -151,10 +151,10 @@ a {
 --------------------------------------------------------------*/
 ::selection {
   color: #fff;
-  background: $accent_color;
+  background: $link_color;
 }
 
 ::-moz-selection {
   color: #fff;
-  background: $accent_color;
+  background: $link_color;
 }

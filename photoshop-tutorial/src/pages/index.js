@@ -13,8 +13,8 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="TOP" />
       <div className={topStyles.top_kv}>
-        <h1 className={topStyles.top_kv_heading}>{siteTitle}</h1>
-        <p className={topStyles.top_kv_desc}>Photoshopで使える技術や小ネタ等を紹介していきます。目指せPhotoshopマスター！</p>
+        <img src="https://placehold.jp/500x500.png" className={topStyles.top_kv_image} />
+        <p className={topStyles.top_kv_desc}>Photoshopで使える技術や小ネタ等を紹介していきます。<br className="sp" />目指せPhotoshopマスター！</p>
       </div>
       <div className={topStyles.top_posts_wrap}>
         <h2 className={topStyles.top_posts_wrap_heading}>記事一覧</h2>
@@ -58,7 +58,7 @@ export const pageQuery = graphql`
           slug
         }
         frontmatter {
-          date(formatString: "MMMM DD, YYYY")
+          date(formatString: "YYYY/MM/DD")
           title
           description
         }
