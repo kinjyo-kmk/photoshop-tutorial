@@ -35,7 +35,7 @@ const BlogPostTemplate = ({ data }) => {
             <li>
               {previous && (
                 <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
+                  {previous.frontmatter.title}
                 </Link>
               )}
             </li>

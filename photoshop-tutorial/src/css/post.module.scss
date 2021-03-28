@@ -1,10 +1,11 @@
 @import './src/css/base.scss';
 
 .post_content {
+  letter-spacing: 0.02em;
 
   h2,h3 {
     font-weight: bold;
-    margin: 1.5em 0 0.5em;
+    margin: 1.5em 0 1em;
   }
 
   h2 {
@@ -29,7 +30,19 @@
   }
 
   h3 {
+    padding-left: 1em;
     font-size: 2.4rem;
+    position: relative;
+
+    &:before {
+      content: "";
+      width: 0.25em;
+      height: 100%;
+      background: $accent_color;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
 
     @include sp-screen {
       font-size: 2rem;
@@ -38,7 +51,7 @@
 
   p {
     &:not(:first-of-type) {
-      margin-top: 1.5rem;
+      margin-top: 1.5em;
     }
   }
 
@@ -53,6 +66,14 @@
     padding: 1em;
     background: #cae2e0;
     border-radius: 5px;
+  }
+
+  em {
+    font-weight: bold;
+  }
+
+  blockquote {
+    font-size: 1.4rem;
   }
 }
 
