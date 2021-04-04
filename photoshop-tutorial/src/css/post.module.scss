@@ -110,4 +110,8 @@
   flex-wrap: wrap;
   justify-content: space-between;
   border-top: solid 1px #cae2e0;
+
+  @include sp-screen {
+    font-size: 1.2rem;
+  }
 }
