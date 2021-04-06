@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
 import * as postStyles from "../css/post.module.scss"
 
 const BlogPostTemplate = ({ data }) => {

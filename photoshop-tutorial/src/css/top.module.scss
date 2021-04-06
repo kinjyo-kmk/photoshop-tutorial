@@ -1,20 +1,15 @@
 @import './src/css/base.scss';
 
 .top_kv {
-
-  &_image {
-    max-width: 100%;
-    margin: 0 auto;
-    display: block;
-
-    @include sp-screen {
-      width: 70%;
-    }
-  }
+  text-align: center;
 
   &_desc {
+    font-size: 1.8rem;
     margin-top: 2em;
-    text-align: center;
+
+    @include sp-screen {
+      font-size: 1.6rem;
+    }
   }
 }
 
@@ -26,13 +21,26 @@
   }
 
   &_heading {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     font-size: 2.8rem;
     font-weight: bold;
     text-align: center;
+    position: relative;
 
     @include sp-screen {
+      margin-bottom: 40px;
       font-size: 2.4rem;
+    }
+
+    &:after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background: $accent_color;
+      position: absolute;
+      bottom: -0.5em;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 }

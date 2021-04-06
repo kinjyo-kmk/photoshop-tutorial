@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Image from "../components/image"
 import * as topStyles from "../css/top.module.scss"
 
 const BlogIndex = ({ data, location }) => {
@@ -13,8 +14,8 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="TOP" />
       <div className={topStyles.top_kv}>
-        <img src="https://placehold.jp/500x500.png" className={topStyles.top_kv_image} />
-        <p className={topStyles.top_kv_desc}>Photoshopで使える技術や小ネタ等を紹介していきます。<br className="sp" />目指せPhotoshopマスター！</p>
+        <Image assetUrl="main.png" alt="宇宙飛行士" className={topStyles.top_kv_image} />
+        <p className={topStyles.top_kv_desc}>Photoshopで使える技術や小ネタ等を<br className="sp" />紹介していきます。<br />目指せPhotoshopマスター！</p>
       </div>
       <div className={topStyles.top_posts_wrap}>
         <h2 className={topStyles.top_posts_wrap_heading}>記事一覧</h2>
