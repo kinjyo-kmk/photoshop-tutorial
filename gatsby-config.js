@@ -3,6 +3,7 @@ module.exports = {
     title: `Photoshop Tutorial`,
     description: `Photoshopで使える技術や小ネタ等を紹介していきます。目指せPhotoshopマスター！`,
   },
+  pathPrefix: `/public`,
   plugins: [
     `gatsby-plugin-image`,
     {
