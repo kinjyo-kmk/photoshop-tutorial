@@ -3,7 +3,7 @@
 .post_content {
   letter-spacing: 0.02em;
 
-  h2,h3 {
+  h2,h3,h4 {
     font-weight: bold;
     margin: 1.5em 0 1em;
   }
@@ -46,6 +46,15 @@
 
     @include sp-screen {
       font-size: 2rem;
+    }
+  }
+
+  h4 {
+    font-size: 2.2rem;
+    color: $accent_color;
+
+    @include sp-screen {
+      font-size: 1.8rem;
     }
   }
 
