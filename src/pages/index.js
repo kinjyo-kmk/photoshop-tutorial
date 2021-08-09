@@ -14,7 +14,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="TOP" />
       <div className={topStyles.top_kv}>
-        <Image assetUrl="main.png" alt="宇宙飛行士" className={topStyles.top_kv_image} />
+        <Image assetUrl="main.png" alt="" className={topStyles.top_kv_image} />
         <p className={topStyles.top_kv_desc}>Photoshopで使える技術や小ネタ等を<br className="sp" />紹介していきます。<br />目指せPhotoshopマスター！</p>
       </div>
       <div className={topStyles.top_posts_wrap}>
