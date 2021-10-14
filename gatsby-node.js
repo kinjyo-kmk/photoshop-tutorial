@@ -22,6 +22,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
           }
         }
+        categoriesGroup: allMarkdownRemark(limit: 1000) {
+          group(field: frontmatter___categories) {
+            fieldValue
+          }
+        }
       }
     `
   )
@@ -56,6 +61,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
+
+  // カテゴリー別記事一覧を生成する
+  const categories = result.data.categoriesGroup.group
+  categories.forEach(category => {
+    createPage({
+      path: `/categories/${category.fieldValue}/`,
+      component: path.resolve(`./src/templates/CategoryList.js`),
+      context: {
+        category: category.fieldValue,
+      },
+    })
+  })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
